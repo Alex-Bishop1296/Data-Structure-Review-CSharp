@@ -59,8 +59,11 @@ namespace DSReview
         /// <summary>
         /// Return a copy of the current item on top of the stack
         /// </summary>
-        /// <returns>top.data</returns>
-        public T peak() {
+        /// <returns>top.data or default return of object if stack is empty</returns>
+        public T peek() {
+            if (isEmpty()) {
+                return default(T);
+            }
             return top.data;
         }
 
